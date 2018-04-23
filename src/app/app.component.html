@@ -1,0 +1,18 @@
+<div>
+  <div class="form-container">
+    <div class="heading-container">
+      <h3>Please select a csv file from your computer.</h3>
+    </div>
+    <form>
+      <div class="upload">
+        <label><input type="file" accept=".csv" (change) = "fileUploadListener($event)"/></label></div>
+    </form>
+  </div>
+  <div class="records">
+    <ul>
+      <li *ngFor="let item of data_list;">
+        <a>  {{item}}</a>
+      </li>
+    </ul>
+  </div>
+</div>
