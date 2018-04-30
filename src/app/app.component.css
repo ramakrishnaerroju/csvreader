@@ -4,127 +4,47 @@ body {
 }
 
 h1 {
-    color: white;
+    color: black;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 250%;
     font-weight: bold;
-    margin-top: 30px;
-    margin-bottom: 22px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 h3{
     font-family: sans-serif;
 }
 
-a {
-    text-decoration: none;
-    color: white;
-}
 
-a:hover {
-    text-decoration: underline;
-}
-
-.header-container, .main-container, .footer-container {
-    width: 700px;
-    margin: 0 auto;
-}
-
-.heading-container{
-    background-color: lightgrey;
-}
-
-.form-container{
-    background-color: lightgrey;
-    height: 500px;
-    color: grey;
-    border: 5px solid lightgrey;
-    border-radius: 5px;
-}
-
-.main-container {
-    margin-bottom: 20px;
-    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
-}
-
-.main-container .resource, .main-container h3 {
-    padding: 16px 23px;
-}
-
-.main-container h3 {
-    margin: 0;
-    color: grey;
-    text-align: center;
-    font-size: 20px;
-    font-weight: bold;
-    background-color: lightgrey;
-}
-
-.main-container h4 {
-    margin: 0;
-    font-size: 16px;
-    font-weight: bold;
-    line-height: 24px;
-}
-
-.main-container p {
-    margin: 0;
-}
-
-.upload{
-    /*background-image:url('../assets/folder.png');*/
-    background-repeat: no-repeat;
-    height: 140px;
-    width: 140px;
-    border-radius: 50%;
-    margin: 0 auto;
-    margin-top: 100px;
-}
-
-.upload label{
-    height: 140px;
-    width: 140px;
-    cursor: pointer;
-}
-
-.upload input{
-    display: block;
-}
-
-.records{
-    background-color: lightgrey;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
- 
-li {
-  font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
-  border-bottom: 1px solid #ccc;
-}
- 
-li:last-child {
-  border: none;
-}
- 
-li a {
-    text-decoration: none;
-    color: black;
-    display: block;
+ .main-container {
     width: 100%;
-    height: 50px;
-    padding-left: 12px;
-    -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
-    -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
-    -o-transition: font-size 0.3s ease, background-color 0.3s ease;
-    -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
-    transition: font-size 0.3s ease, background-color 0.3s ease;
+    margin: 0 auto;
 }
 
-li a:hover {
-  font-size: 30px;
-  background: #f6f6f6;
+form{
+    
+    color: grey;
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

@@ -1,18 +1,33 @@
-<div>
-  <div class="form-container">
-    <div class="heading-container">
+<div class="container-fluid">
+  <div class="jumbotron">
+    <h1>CSV to LineChart</h1> 
+  </div>
+  <header>
+    <div>
       <h3>Please select a csv file from your computer.</h3>
     </div>
     <form>
-      <div class="upload">
-        <label><input type="file" accept=".csv" (change) = "fileUploadListener($event)"/></label></div>
+      <div>
+        <label><input id="FileReader" type="file" accept=".csv" (change) = "fileReadListener($event)"/></label>
+      </div>
     </form>
-  </div>
-  <div class="records">
-    <ul>
-      <li *ngFor="let item of data_list;">
-        <a>  {{item}}</a>
-      </li>
-    </ul>
-  </div>
+  </header>
+  <section [hidden]="!showLineChart">
+   <ngx-charts-line-chart
+      [view]="view"
+      [scheme]="colorScheme"
+      [results]="multi"
+      [gradient]="gradient"
+      [xAxis]="showXAxis"
+      [yAxis]="showYAxis"
+      [legend]="showLegend"
+      [showXAxisLabel]="showXAxisLabel"
+      [showYAxisLabel]="showYAxisLabel"
+      [xAxisLabel]="xAxisLabel"
+      [yAxisLabel]="yAxisLabel"
+      [autoScale]="autoScale"
+      [timeline]="timeline"
+      (select)="onSelect($event)">
+    </ngx-charts-line-chart>
+  </section>
 </div>
